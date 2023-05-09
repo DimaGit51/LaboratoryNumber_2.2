@@ -19,6 +19,7 @@ namespace LaboratoryNumber_2_2_WinForms
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            DataBank.DestroyL();
             this.Close();
         }
 
@@ -28,8 +29,9 @@ namespace LaboratoryNumber_2_2_WinForms
             int[] dates = new int[listBox.Items.Count];
             for (int i = 0; i < listBox.Items.Count; i++) dates[i] = int.Parse(listBox.Items[i].ToString());
             DataBank.CreatMass(dates);
-            PrintCreateList Fprntlst = new PrintCreateList();
-            Fprntlst.Show();
+            //Отдельная форма для демонтсрации созданного списка
+            //PrintCreateList Fprntlst = new PrintCreateList();
+            //Fprntlst.Show();
         }
 
         private void ButtonAdd_Click(object sender, EventArgs e)
@@ -91,6 +93,29 @@ namespace LaboratoryNumber_2_2_WinForms
             DataBank.logicTask = "-3";
             PatternDelInList PtrnAddLst = new PatternDelInList();
             PtrnAddLst.Show();
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProgramInfo PrgrmInf = new ProgramInfo();
+            PrgrmInf.Show();
+        }
+
+        private void обработкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyTask14 Mtsk = new MyTask14();
+            Mtsk.Show();
+        }
+
+        private void разрушениеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataBank.ClearListL();
+        }
+
+        private void doubleListNowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrintCreateList Fprntlst = new PrintCreateList();
+            Fprntlst.Show();
         }
     }
 }

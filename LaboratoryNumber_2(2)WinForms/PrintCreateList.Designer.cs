@@ -36,11 +36,11 @@
             // 
             this.labelListPrint.AutoSize = true;
             this.labelListPrint.Font = new System.Drawing.Font("Times New Roman", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelListPrint.Location = new System.Drawing.Point(32, 9);
+            this.labelListPrint.Location = new System.Drawing.Point(51, 9);
             this.labelListPrint.Name = "labelListPrint";
-            this.labelListPrint.Size = new System.Drawing.Size(258, 32);
+            this.labelListPrint.Size = new System.Drawing.Size(215, 32);
             this.labelListPrint.TabIndex = 0;
-            this.labelListPrint.Text = "Список List создан!:";
+            this.labelListPrint.Text = "Список ListNow:";
             // 
             // listBoxPrintList
             // 

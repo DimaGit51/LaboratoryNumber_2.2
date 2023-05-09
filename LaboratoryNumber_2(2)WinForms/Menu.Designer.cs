@@ -51,6 +51,7 @@
             this.textBoxAdd = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.listBox = new System.Windows.Forms.ListBox();
+            this.doubleListNowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +72,7 @@
             // 
             this.заданиеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.созданиеСпискаToolStripMenuItem,
+            this.doubleListNowToolStripMenuItem,
             this.редактированиеСпискаToolStripMenuItem,
             this.обработкаToolStripMenuItem,
             this.разрушениеToolStripMenuItem});
@@ -107,21 +109,21 @@
             // вНачалоToolStripMenuItem
             // 
             this.вНачалоToolStripMenuItem.Name = "вНачалоToolStripMenuItem";
-            this.вНачалоToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.вНачалоToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
             this.вНачалоToolStripMenuItem.Text = "В начало";
             this.вНачалоToolStripMenuItem.Click += new System.EventHandler(this.вНачалоToolStripMenuItem_Click);
             // 
             // вКонецToolStripMenuItem
             // 
             this.вКонецToolStripMenuItem.Name = "вКонецToolStripMenuItem";
-            this.вКонецToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.вКонецToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
             this.вКонецToolStripMenuItem.Text = "В конец";
             this.вКонецToolStripMenuItem.Click += new System.EventHandler(this.вКонецToolStripMenuItem_Click);
             // 
             // вПроизвольнуюToolStripMenuItem
             // 
             this.вПроизвольнуюToolStripMenuItem.Name = "вПроизвольнуюToolStripMenuItem";
-            this.вПроизвольнуюToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.вПроизвольнуюToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
             this.вПроизвольнуюToolStripMenuItem.Text = "В произвольную";
             this.вПроизвольнуюToolStripMenuItem.Click += new System.EventHandler(this.вПроизвольнуюToolStripMenuItem_Click);
             // 
@@ -138,21 +140,21 @@
             // вНачалоToolStripMenuItem1
             // 
             this.вНачалоToolStripMenuItem1.Name = "вНачалоToolStripMenuItem1";
-            this.вНачалоToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.вНачалоToolStripMenuItem1.Size = new System.Drawing.Size(209, 26);
             this.вНачалоToolStripMenuItem1.Text = "В начало";
             this.вНачалоToolStripMenuItem1.Click += new System.EventHandler(this.вНачалоToolStripMenuItem1_Click);
             // 
             // вКонецToolStripMenuItem1
             // 
             this.вКонецToolStripMenuItem1.Name = "вКонецToolStripMenuItem1";
-            this.вКонецToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.вКонецToolStripMenuItem1.Size = new System.Drawing.Size(209, 26);
             this.вКонецToolStripMenuItem1.Text = "В конец";
             this.вКонецToolStripMenuItem1.Click += new System.EventHandler(this.вКонецToolStripMenuItem1_Click);
             // 
             // вПроизвольнуюToolStripMenuItem1
             // 
             this.вПроизвольнуюToolStripMenuItem1.Name = "вПроизвольнуюToolStripMenuItem1";
-            this.вПроизвольнуюToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.вПроизвольнуюToolStripMenuItem1.Size = new System.Drawing.Size(209, 26);
             this.вПроизвольнуюToolStripMenuItem1.Text = "В произвольную";
             this.вПроизвольнуюToolStripMenuItem1.Click += new System.EventHandler(this.вПроизвольнуюToolStripMenuItem1_Click);
             // 
@@ -161,18 +163,21 @@
             this.обработкаToolStripMenuItem.Name = "обработкаToolStripMenuItem";
             this.обработкаToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
             this.обработкаToolStripMenuItem.Text = "Обработка";
+            this.обработкаToolStripMenuItem.Click += new System.EventHandler(this.обработкаToolStripMenuItem_Click);
             // 
             // разрушениеToolStripMenuItem
             // 
             this.разрушениеToolStripMenuItem.Name = "разрушениеToolStripMenuItem";
             this.разрушениеToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
-            this.разрушениеToolStripMenuItem.Text = "Разрушение";
+            this.разрушениеToolStripMenuItem.Text = "Очистка";
+            this.разрушениеToolStripMenuItem.Click += new System.EventHandler(this.разрушениеToolStripMenuItem_Click);
             // 
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
             this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(118, 24);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
             // выходToolStripMenuItem
             // 
@@ -237,6 +242,13 @@
             this.listBox.Size = new System.Drawing.Size(173, 308);
             this.listBox.TabIndex = 7;
             // 
+            // doubleListNowToolStripMenuItem
+            // 
+            this.doubleListNowToolStripMenuItem.Name = "doubleListNowToolStripMenuItem";
+            this.doubleListNowToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
+            this.doubleListNowToolStripMenuItem.Text = "DoubleList Now";
+            this.doubleListNowToolStripMenuItem.Click += new System.EventHandler(this.doubleListNowToolStripMenuItem_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -284,6 +296,7 @@
         private System.Windows.Forms.TextBox textBoxAdd;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.ListBox listBox;
+        private System.Windows.Forms.ToolStripMenuItem doubleListNowToolStripMenuItem;
     }
 }
 
