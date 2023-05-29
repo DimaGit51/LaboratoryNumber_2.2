@@ -117,6 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBox3.Text" xml:space="preserve">
+    <value>Как пользоваться программой?
+1. Введите элементы в список_1, 
+   используя кнопки Add и Remove для 
+   добавления и удаления элемента 
+   соответсвенно;
+2. Нажмите в меню "Создание списка"
+   (У вас будет создан список)
+   (Чтобы его посмотреть - используйте кнопку в
+    меню "DoubleNodeList Now");
+3. Вы можете сделать редактирование списка;
+4. Также вы можете сделать обработку списка 
+    по заданию (там будет создание списка_2);
+5. А также вы можете сделать очистку списка;
+6. Нажмите "выход" для завершения программы;</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

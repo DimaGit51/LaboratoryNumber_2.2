@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace LaboratoryNumber_2_2_WinForms
 {
-    public partial class PatternDelInList : Form
+    public partial class PatternDelInList_StartEnd : Form
     {
-        public PatternDelInList()
+        public PatternDelInList_StartEnd()
         {
             InitializeComponent();
+            DataBank.PrintListBox(listBoxPatternDelInList);
+
         }
 
         private void ButtonDel_Click(object sender, EventArgs e)
@@ -32,12 +34,6 @@ namespace LaboratoryNumber_2_2_WinForms
                 DataBank.DelElementsK(listBoxPatternDelInList);
                 DataBank.PrintListBox(listBoxPatternDelInList);
                 
-            }
-            else if (DataBank.logicTask == "-3")
-            {
-                listBoxPatternDelInList.Items.Clear();
-                DataBank.DelElementsR(listBoxPatternDelInList);
-                DataBank.PrintListBox(listBoxPatternDelInList);
             }
         }
     }

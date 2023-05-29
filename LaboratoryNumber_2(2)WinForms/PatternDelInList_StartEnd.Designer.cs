@@ -1,6 +1,6 @@
 ﻿namespace LaboratoryNumber_2_2_WinForms
 {
-    partial class PatternDelInList
+    partial class PatternDelInList_StartEnd
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatternDelInList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatternDelInList_StartEnd));
             this.listBoxPatternDelInList = new System.Windows.Forms.ListBox();
             this.ButtonDel = new System.Windows.Forms.Button();
             this.SuspendLayout();

@@ -32,6 +32,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.заданиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.созданиеСпискаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.doubleListNowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.редактированиеСпискаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.добавлениеЭлементаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вНачалоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +52,6 @@
             this.textBoxAdd = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.listBox = new System.Windows.Forms.ListBox();
-            this.doubleListNowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +64,7 @@
             this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(604, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(635, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -86,6 +86,13 @@
             this.созданиеСпискаToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
             this.созданиеСпискаToolStripMenuItem.Text = "Создание списка";
             this.созданиеСпискаToolStripMenuItem.Click += new System.EventHandler(this.созданиеСпискаToolStripMenuItem_Click);
+            // 
+            // doubleListNowToolStripMenuItem
+            // 
+            this.doubleListNowToolStripMenuItem.Name = "doubleListNowToolStripMenuItem";
+            this.doubleListNowToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
+            this.doubleListNowToolStripMenuItem.Text = "DoubleList Now";
+            this.doubleListNowToolStripMenuItem.Click += new System.EventHandler(this.doubleListNowToolStripMenuItem_Click);
             // 
             // редактированиеСпискаToolStripMenuItem
             // 
@@ -229,9 +236,9 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(389, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(189, 26);
+            this.label1.Size = new System.Drawing.Size(213, 26);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Создание списка:";
+            this.label1.Text = "Создание списка_1:";
             // 
             // listBox
             // 
@@ -242,18 +249,11 @@
             this.listBox.Size = new System.Drawing.Size(173, 308);
             this.listBox.TabIndex = 7;
             // 
-            // doubleListNowToolStripMenuItem
-            // 
-            this.doubleListNowToolStripMenuItem.Name = "doubleListNowToolStripMenuItem";
-            this.doubleListNowToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
-            this.doubleListNowToolStripMenuItem.Text = "DoubleList Now";
-            this.doubleListNowToolStripMenuItem.Click += new System.EventHandler(this.doubleListNowToolStripMenuItem_Click);
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 450);
+            this.ClientSize = new System.Drawing.Size(635, 450);
             this.Controls.Add(this.buttonRemove);
             this.Controls.Add(this.ButtonAdd);
             this.Controls.Add(this.textBoxAdd);

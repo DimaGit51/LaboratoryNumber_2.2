@@ -17,31 +17,8 @@ namespace LaboratoryNumber_2_2_WinForms
             InitializeComponent();
         }
 
-        private void ButtonAdd1_Click(object sender, EventArgs e)
-        {
-            int number;
-            if ((!int.TryParse(textBoxAdd1.Text, out number)))
-            {
-                MessageBox.Show("Вы ввели не число!!!");
-            }
-            else
-            {
-                listBox1.Items.Add(number);
-                textBoxAdd1.Clear();
-            }
-        }
 
-        private void buttonRemove1_Click(object sender, EventArgs e)
-        {
-            if (listBox1.SelectedIndex > -1) listBox1.Items.RemoveAt(listBox1.SelectedIndex);
-        }
 
-        private void buttonList1_Click(object sender, EventArgs e)
-        {
-            int[] dates = new int[listBox1.Items.Count];
-            for (int i = 0; i < listBox1.Items.Count; i++) dates[i] = int.Parse(listBox1.Items[i].ToString());
-            DataBank.CreatMassL1(dates);
-        }
 
         private void ButtonAdd2_Click(object sender, EventArgs e)
         {
@@ -73,8 +50,6 @@ namespace LaboratoryNumber_2_2_WinForms
         {
             listBox3.Items.Clear();
             DataBank.MergeListsElements(listBox3);
-            DataBank.PrintListBox(listBox3);
-
         }
     }
 }

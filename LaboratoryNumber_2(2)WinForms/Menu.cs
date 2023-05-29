@@ -19,16 +19,20 @@ namespace LaboratoryNumber_2_2_WinForms
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DataBank.DestroyL();
-            this.Close();
+            DialogResult dialogResult = MessageBox.Show("Вы точно хотите выйти из программы?", "Проверка выхода", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                DataBank.DestroyL();
+                this.Close();
+            }
         }
 
         private void созданиеСпискаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DataBank.L = new CycleDoubleLinkedList();
+            DataBank.L1 = new CycleDoubleLinkedList();
             int[] dates = new int[listBox.Items.Count];
             for (int i = 0; i < listBox.Items.Count; i++) dates[i] = int.Parse(listBox.Items[i].ToString());
-            DataBank.CreatMass(dates);
+            DataBank.CreatMassL1(dates);
             //Отдельная форма для демонтсрации созданного списка
             //PrintCreateList Fprntlst = new PrintCreateList();
             //Fprntlst.Show();
@@ -56,43 +60,41 @@ namespace LaboratoryNumber_2_2_WinForms
         private void вНачалоToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DataBank.logicTask = "1";
-            PatternAddInList PtrnAddLst = new PatternAddInList();
+            PatternAddInList_StartEnd PtrnAddLst = new PatternAddInList_StartEnd();
             PtrnAddLst.Show();
         }
 
         private void вКонецToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DataBank.logicTask = "2";
-            PatternAddInList PtrnAddLst = new PatternAddInList();
+            PatternAddInList_StartEnd PtrnAddLst = new PatternAddInList_StartEnd();
             PtrnAddLst.Show();
         }
 
         private void вПроизвольнуюToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DataBank.logicTask = "3";
-            PatternAddInList PtrnAddLst = new PatternAddInList();
-            PtrnAddLst.Show();
+            PatternAddInList_Random PtrnAddLstRnd = new PatternAddInList_Random();
+            PtrnAddLstRnd.Show();
         }
 
         private void вНачалоToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             DataBank.logicTask = "-1";
-            PatternDelInList PtrnAddLst = new PatternDelInList();
+            PatternDelInList_StartEnd PtrnAddLst = new PatternDelInList_StartEnd();
             PtrnAddLst.Show();
         }
 
         private void вКонецToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             DataBank.logicTask = "-2";
-            PatternDelInList PtrnAddLst = new PatternDelInList();
+            PatternDelInList_StartEnd PtrnAddLst = new PatternDelInList_StartEnd();
             PtrnAddLst.Show();
         }
 
         private void вПроизвольнуюToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            DataBank.logicTask = "-3";
-            PatternDelInList PtrnAddLst = new PatternDelInList();
-            PtrnAddLst.Show();
+            PatternDelInList_Random PtrnDelLstRnd = new PatternDelInList_Random();
+            PtrnDelLstRnd.Show();
         }
 
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)

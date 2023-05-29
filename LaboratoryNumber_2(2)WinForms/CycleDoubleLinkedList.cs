@@ -3,35 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace LaboratoryNumber_2_2
+namespace LaboratoryNumber_2_2_WinForms
 {
-    public class DoubleNode
-    {
-        private int info;
-        private DoubleNode next;
-        private DoubleNode prev;
-
-        public int Info
-        {
-            get { return info; }
-            set { info = value; }
-        }
-        public DoubleNode Next
-        {
-            get { return next; }
-            set { next = value; }
-        }
-        public DoubleNode Prev
-        {
-            get { return prev; }
-            set { prev = value; }
-        }
-
-        public DoubleNode() { }
-        public DoubleNode(int info) { this.info = info; }
-        public DoubleNode(int info, DoubleNode next, DoubleNode prev) { this.Info = info; this.Next = next; this.Prev = prev; }
-    }
     public class CycleDoubleLinkedList
     {
         private DoubleNode head; // ссылка на головной узел списка
@@ -116,74 +91,63 @@ namespace LaboratoryNumber_2_2
             }
             return p;
         }
-        public void PrintDoubleList()
+        public void PrintDoubleList(ListBox listbox)
         {
-            DoubleNode p = head.Next;
-            while (p != head)
+            if (head != null)
             {
-                Console.WriteLine(p.Info);
-                p = p.Next;
+                DoubleNode p = head.Next;
+                while (p != head)
+                {
+                    listbox.Items.Add(p.Info);
+                    p = p.Next;
+                }
             }
         }
+
         public void InsertBeforeFirst(int data)
         {
-            DoubleNode q = head;
-            InsertRight(q, data);
+            if (head != null)
+            {
+                DoubleNode q = head;
+                InsertRight(q, data);
+            }
         }
         public void InsertAfterEnd(int data)
         {
-            DoubleNode q = head;
-            InsertLeft(q, data);
-        }
-        public void InsertRandom(int data)
-        {
-            int count = 0;
-            DoubleNode p = head.Next;
-            while (p != head)
+            if (head != null)
             {
-                p = p.Next;
-                count++;
+                DoubleNode q = head;
+                InsertLeft(q, data);
             }
-            Random rnd = new Random();
-            int countRnd = rnd.Next(1, count); count = 0;
-            p = head;
-            while (p != null && count < countRnd)
-            {
-                p = p.Next;
-                count++;
-            }
-            InsertLeft(p, data);
         }
+
         public void DeleteBeforeFirst()
         {
-            DoubleNode q = head.Next;
-            Delete(q);
+            if (head != null)
+            {
+                DoubleNode q = head.Next;
+                Delete(q);
+            }
         }
         public void DeleteAfterEnd()
         {
-            DoubleNode p = head.Prev;
-            Delete(p);
+            if (head != null)
+            {
+                DoubleNode p = head.Prev;
+                Delete(p);
+            }
         }
-        public void DeleteRandom()
+
+        public void Clear()
         {
-            int count = 0;
-            DoubleNode p = head.Next;
-            while (p != head)
-            {
-                p = p.Next;
-                count++;
-            }
-            Random rnd = new Random();
-            int countRnd = rnd.Next(1, count); count = 0;
-            p = head;
-            while (p != null && count < countRnd)
-            {
-                p = p.Next;
-                count++;
-            }
-            Delete(p);
+            head = head.Next = head.Prev;
         }
-        public static void MergeLists(CycleDoubleLinkedList list1, CycleDoubleLinkedList list2)
+        public void Destroy()
+        {
+            head = null;
+        }
+
+        public static void MergeLists(CycleDoubleLinkedList list1, CycleDoubleLinkedList list2, ListBox listbox)
         {
             CycleDoubleLinkedList mergedList = new CycleDoubleLinkedList();
             DoubleNode current1 = list1.head.Next;
@@ -201,52 +165,8 @@ namespace LaboratoryNumber_2_2
                     current2 = current2.Next;
                 }
             }
-            mergedList.PrintDoubleList();
+            mergedList.PrintDoubleList(listbox);
         }
-    }
-    public class Program
-    {
-        static void Main()
-        {
-            CycleDoubleLinkedList L = new CycleDoubleLinkedList();
-            L.Create(new int[] { 1, 2, 3, 4, 5 });
-            Console.WriteLine("Список");
-            L.PrintDoubleList();
-            Console.WriteLine();
-            Console.WriteLine("Добавление перед началом списка");
-            L.InsertBeforeFirst(10);
-            L.PrintDoubleList();
-            Console.WriteLine();
-            Console.WriteLine("Добавление в конец списка");
-            L.InsertAfterEnd(20);
-            L.PrintDoubleList();
-            Console.WriteLine();
-            Console.WriteLine("Добавление в random списка");
-            L.InsertRandom(77);
-            L.PrintDoubleList();
-            Console.WriteLine();
-            Console.WriteLine("Удаление в начале списка");
-            L.DeleteBeforeFirst();
-            L.PrintDoubleList();
-            Console.WriteLine();
-            Console.WriteLine("Удаление в конце списка");
-            L.DeleteAfterEnd();
-            L.PrintDoubleList();
-            Console.WriteLine();
-            Console.WriteLine("Удаление в random списка");
-            L.DeleteRandom();
-            L.PrintDoubleList();
-            Console.WriteLine();
-            Console.WriteLine("Индивидуально задание");
-            int[] ints1 = { 1, 3, 5, 7, 9 };
-            int[] ints2 = { 2, 4, 6, 8, 10 };
-            CycleDoubleLinkedList L1 = new CycleDoubleLinkedList();
-            CycleDoubleLinkedList L2 = new CycleDoubleLinkedList();
-            L1.Create(ints1);
-            L2.Create(ints2);
 
-            CycleDoubleLinkedList.MergeLists(L1, L2);
-
-        }
     }
 }

@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace LaboratoryNumber_2_2_WinForms
 {
-    public partial class PatternAddInList : Form
+    public partial class PatternAddInList_StartEnd : Form
     {
-        public PatternAddInList()
+        public PatternAddInList_StartEnd()
         {
             InitializeComponent();
+            DataBank.PrintListBox(listBoxPatternAddInList);
         }
 
         private void ButtonAdd_Click(object sender, EventArgs e)
@@ -45,21 +46,6 @@ namespace LaboratoryNumber_2_2_WinForms
                 {
                     textBoxAddPatternAdd.Clear();
                     DataBank.AddElementesK(listBoxPatternAddInList, number);
-                    DataBank.PrintListBox(listBoxPatternAddInList);
-                }
-            }
-            else if (DataBank.logicTask == "3")
-            {
-                listBoxPatternAddInList.Items.Clear();
-                int number;
-                if ((!int.TryParse(textBoxAddPatternAdd.Text, out number)))
-                {
-                    MessageBox.Show("Вы ввели не число!!!");
-                }
-                else
-                {
-                    textBoxAddPatternAdd.Clear();
-                    DataBank.AddElementesR(listBoxPatternAddInList, number);
                     DataBank.PrintListBox(listBoxPatternAddInList);
                 }
             }

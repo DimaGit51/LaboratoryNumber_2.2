@@ -46,17 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CycleDoubleLinkedList.cs" />
+    <Compile Include="DataBank.cs" />
+    <Compile Include="DoubleNode.cs" />
     <Compile Include="MyTask14.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MyTask14.Designer.cs">
       <DependentUpon>MyTask14.cs</DependentUpon>
     </Compile>
-    <Compile Include="PatternAddInList.cs">
+    <Compile Include="PatternAddInList_Random.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PatternAddInList.Designer.cs">
-      <DependentUpon>PatternAddInList.cs</DependentUpon>
+    <Compile Include="PatternAddInList_Random.Designer.cs">
+      <DependentUpon>PatternAddInList_Random.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatternAddInList_StartEnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatternAddInList_StartEnd.Designer.cs">
+      <DependentUpon>PatternAddInList_StartEnd.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -64,11 +73,17 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="PatternDelInList.cs">
+    <Compile Include="PatternDelInList_Random.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PatternDelInList.Designer.cs">
-      <DependentUpon>PatternDelInList.cs</DependentUpon>
+    <Compile Include="PatternDelInList_Random.Designer.cs">
+      <DependentUpon>PatternDelInList_Random.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatternDelInList_StartEnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatternDelInList_StartEnd.Designer.cs">
+      <DependentUpon>PatternDelInList_StartEnd.cs</DependentUpon>
     </Compile>
     <Compile Include="PrintCreateList.cs">
       <SubType>Form</SubType>
@@ -87,14 +102,20 @@
     <EmbeddedResource Include="MyTask14.resx">
       <DependentUpon>MyTask14.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PatternAddInList.resx">
-      <DependentUpon>PatternAddInList.cs</DependentUpon>
+    <EmbeddedResource Include="PatternAddInList_Random.resx">
+      <DependentUpon>PatternAddInList_Random.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatternAddInList_StartEnd.resx">
+      <DependentUpon>PatternAddInList_StartEnd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PatternDelInList.resx">
-      <DependentUpon>PatternDelInList.cs</DependentUpon>
+    <EmbeddedResource Include="PatternDelInList_Random.resx">
+      <DependentUpon>PatternDelInList_Random.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatternDelInList_StartEnd.resx">
+      <DependentUpon>PatternDelInList_StartEnd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintCreateList.resx">
       <DependentUpon>PrintCreateList.cs</DependentUpon>

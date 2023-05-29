@@ -1,6 +1,6 @@
 ﻿namespace LaboratoryNumber_2_2_WinForms
 {
-    partial class PatternAddInList
+    partial class PatternAddInList_StartEnd
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatternAddInList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatternAddInList_StartEnd));
             this.listBoxPatternAddInList = new System.Windows.Forms.ListBox();
             this.ButtonAdd = new System.Windows.Forms.Button();
             this.textBoxAddPatternAdd = new System.Windows.Forms.TextBox();
