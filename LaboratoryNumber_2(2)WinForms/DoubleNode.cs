@@ -30,6 +30,6 @@ namespace LaboratoryNumber_2_2_WinForms
 
         public DoubleNode() { }
         public DoubleNode(int info) { this.info = info; }
-        public DoubleNode(int info, DoubleNode next, DoubleNode prev) { this.Info = info; this.Next = next; this.Prev = prev; }
+        public DoubleNode(int info, DoubleNode next, DoubleNode prev) { Info = info; Next = next; Prev = prev; }
     }
 }
